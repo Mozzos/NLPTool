@@ -1,0 +1,22 @@
+{
+  "name": "Mozzos/nlptool",
+  "description": "Multi function Natural Language Processing system.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brett Cao",
+      "email": "brettcaomail@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/support": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mozzos\\NLPTool\\": "src/"
+    }
+  }
+}
