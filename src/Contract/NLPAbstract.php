@@ -46,12 +46,22 @@ abstract class NLPAbstract
      */
     public function get()
     {
-        return json_decode($this->res);
+        if (!empty($this->res)){
+            if (is_string($this->res)){
+                $this->res = trim($this->res,'"""');
+                $this->res = str_replace("\n","",$this->res);
+                return json_decode($this->res);
+            }else if (is_array($this->res)){
+                return $this->res;
+            }
+        }else{
+            return [];
+        }
     }
 
     public function group($level = null){
         $newResults = [];
-        if($level){
+        if($level && $this->get()){
             switch ($level){
                 case 2:
                     foreach ($this->get() as $section){
