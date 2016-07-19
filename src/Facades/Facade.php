@@ -9,10 +9,12 @@
 namespace Mozzos\NLPTool\Facades;
 
 
-class Facade extends \Illuminate\Support\Facades\Facade
+use Illuminate\Support\Facades\Facade;
+
+class NLPTool extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'mozzos.NLPTool';
+        return 'NLPTool';
     }
 }
