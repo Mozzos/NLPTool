@@ -14,7 +14,7 @@ class NLPToolServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/nlp.php' => config_path('nlp.php'),
+            __DIR__ . '/../config/nlp.php' => config_path('nlp.php'),
         ]);
     }
 
